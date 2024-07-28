@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sniply</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .haircut {
+            margin: 20px 0;
+        }
+        .haircut h2 {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #0073e6;
+        }
+        .details {
+            display: none;
+        }
+        .details.active {
+            display: block;
+        }
+        .details h3 {
+            margin-bottom: 10px;
+        }
+        .details ul, .details ol {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sniply</h1>
+        <div class="haircut">
+            <h2 onclick="toggleDetails('texturedFringeDetails')">Textured Fringe</h2>
+            <div class="details" id="texturedFringeDetails">
+                <h3>What to ask your barber:</h3>
+                <ul>
+                    <li>A short cut with plenty of texture</li>
+                    <li>Keep the fringe longer and choppy</li>
+                    <li>Thinned out on top to reduce bulk</li>
+                </ul>
+                <h3>Products to buy:</h3>
+                <ul>
+                    <li><a href="https://www.example.com/product1" target="_blank">Product 1</a></li>
+                    <li><a href="https://www.example.com/product2" target="_blank">Product 2</a></li>
+                </ul>
+                <h3>Step-by-step styling:</h3>
+                <ol>
+                    <li>Apply a small amount of styling product to damp hair.</li>
+                    <li>Use your fingers to work the product through your hair, focusing on the fringe.</li>
+                    <li>Blow-dry while tousling the hair to create texture.</li>
+                    <li>Finish with a matte styling product for hold and definition.</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Add more haircuts here -->
+    </div>
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+            } else {
+                details.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
