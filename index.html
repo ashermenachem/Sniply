@@ -35,51 +35,16 @@
             color: #0073e6;
             font-size: 1.5em;
         }
-        .details {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        .details h3 {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-        .details ul, .details ol {
-            padding-left: 20px;
-            text-align: left;
-        }
-        .details ul li, .details ol li {
-            margin-bottom: 5px;
-        }
-        .details a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .details a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Sniply</h1>
         <div id="haircuts">
-            <!-- Haircuts will be added here -->
+            <div class="haircut">
+                <h2 onclick="window.location.href='high-and-tight-crew-cut.html'">High and Tight Crew Cut</h2>
+            </div>
         </div>
     </div>
-    <script>
-        function toggleDetails(id) {
-            var details = document.getElementById(id);
-            if (details.classList.contains('active')) {
-                details.classList.remove('active');
-                details.style.display = 'none';
-            } else {
-                details.classList.add('active');
-                details.style.display = 'block';
-            }
-        }
-    </script>
 </body>
 </html>
