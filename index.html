@@ -6,34 +6,59 @@
     <title>Sniply</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
         .container {
             background: white;
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            max-width: 600px;
-            width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
         }
         h1 {
             color: #333;
-            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
         .haircut {
             margin: 20px 0;
+            text-align: left;
         }
         .haircut h2 {
             margin-bottom: 10px;
             cursor: pointer;
             color: #0073e6;
+            font-size: 1.5em;
+        }
+        .details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .details h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .details ul, .details ol {
+            padding-left: 20px;
+            text-align: left;
+        }
+        .details ul li, .details ol li {
+            margin-bottom: 5px;
+        }
+        .details a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .details a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -45,7 +70,16 @@
         </div>
     </div>
     <script>
-        // JavaScript to load haircuts dynamically
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+                details.style.display = 'none';
+            } else {
+                details.classList.add('active');
+                details.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
